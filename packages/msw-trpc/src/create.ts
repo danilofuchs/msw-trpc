@@ -8,7 +8,6 @@ import { HttpHandler } from 'msw'
 const createTRPCMsw = <Router extends AnyTRPCRouter>(config: TRPCMswConfig) => {
   const { links, transformer } = config
 
-  // @ts-expect-error any
   const createUntypedTRPCMsw = (pathParts: string[] = []) => {
     return new Proxy(
       {},
